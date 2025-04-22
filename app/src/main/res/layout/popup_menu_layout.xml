@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- Opción 1 -->
+    <TextView
+        android:id="@+id/op1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio"
+        android:padding="10dp"
+        android:textColor=" #545C74" />
+
+    <!-- Opción 2 -->
+    <TextView
+        android:id="@+id/op2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promociones"
+        android:padding="10dp"
+        android:textColor=" #545C74" />
+
+    <!-- Opción 3 -->
+    <TextView
+        android:id="@+id/op3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacto"
+        android:padding="10dp"
+        android:textColor=" #545C74" />
+
+    <!-- Opción 4 -->
+    <TextView
+        android:id="@+id/op4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nosotros"
+        android:padding="10dp"
+        android:textColor=" #545C74" />
+
+</LinearLayout>

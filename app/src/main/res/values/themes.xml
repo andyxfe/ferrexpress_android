@@ -6,6 +6,6 @@
         <item name="colorPrimary">@android:color/holo_red_dark</item>
         <item name="colorPrimaryDark">@android:color/holo_red_light</item>
         <item name="colorAccent">@android:color/holo_orange_light</item>
-    </style>
 
+    </style>
 </resources>

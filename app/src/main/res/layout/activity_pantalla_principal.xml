@@ -101,6 +101,7 @@
                 >
 
                 <Button
+                    android:id="@+id/botonLogin"
                     android:layout_width="63dp"
                     android:layout_height="42dp"
                     android:layout_weight="8"
@@ -122,17 +123,23 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/botonCarrito"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="3dp"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:contentDescription="Carrito"
                     android:src="@drawable/carritocompra" />
 
                 <ImageView
+                    android:id="@+id/btnmenu"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="2dp"
                     android:contentDescription="Menú"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:src="@drawable/iconomenu" />
             </LinearLayout>
         </LinearLayout>
@@ -414,7 +421,9 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
+                            android:src="@drawable/taladro"
+                            android:clickable="true"
+                            android:focusable="true"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -622,6 +631,7 @@
             <!-- contenedor principal horizontal -->
             <LinearLayout
                 android:layout_width="wrap_content"
+                android:layout_gravity="end"
                 android:layout_height="180dp"
                 android:background="#E1D7D7"
                 android:orientation="horizontal"
@@ -633,9 +643,9 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:background="@android:color/transparent"
-                        android:padding="10dp">
+                        android:padding="5dp">
                         <TextView
-                            android:layout_width="180dp"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="Preguntas frecuentes Cambios y devoluciones Términos y condiciones Protección de datos Política de cookies Superintendencia de industria y comercio SIC PQR Política de tratamiento de datos"
@@ -664,12 +674,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_gravity="end"
                     android:background="@android:color/transparent"
-                    android:padding="10dp">
+                    android:padding="5dp">
                     <TextView
-                        android:layout_width="180dp"
+                        android:layout_width="130dp"
                         android:layout_height="150dp"
-                        android:layout_marginTop="10dp"
                         android:text="Términos y condiciones Servicio al cliente Misión Visión ¿Cómo comprar Catálogo"
                         android:textColor="@color/black"
                         android:textSize="14sp"/>
@@ -677,7 +687,6 @@
                     <TextView
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:text="Mi cuenta Regístrate Cambia tu clave Olvidé mi clave"
                         android:textColor="@color/black"
                         android:textSize="13sp" />
