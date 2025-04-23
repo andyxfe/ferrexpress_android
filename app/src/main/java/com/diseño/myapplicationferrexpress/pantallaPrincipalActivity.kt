@@ -13,6 +13,7 @@ import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myapplicationferrexpress.R
@@ -32,13 +33,24 @@ class pantallaPrincipalActivity : AppCompatActivity() {
         botonMenu.setOnClickListener {
             showPopupMenu(botonMenu)
         }
-        val botonCarrito=findViewById<ImageView>(R.id.botonCarrito)
-        botonCarrito.setOnClickListener{navegacionCarrito()}
+        val botonCarrito = findViewById<ImageView>(R.id.botonCarrito)
+        botonCarrito.setOnClickListener { navegacionCarrito() }
 
-        val botonLogin=findViewById<Button>(R.id.botonLogin)
+        val botonLogin = findViewById<Button>(R.id.botonLogin)
         botonLogin.setOnClickListener { navegacionLogin() }
-    }
 
+        val botonProductos = findViewById<CardView>(R.id.targetasProductos)
+        botonProductos.setOnClickListener { navegacionProductos() }
+
+        val botonProductos2 = findViewById<CardView>(R.id.targetasProductos2)
+        botonProductos2.setOnClickListener { navegacionProductos2() }
+
+        val botonProductos3 = findViewById<CardView>(R.id.targetasProductos3)
+        botonProductos3.setOnClickListener { navegacionProductos3() }
+
+        val botonProductos4 = findViewById<CardView>(R.id.targetasProductos4)
+        botonProductos4.setOnClickListener { navegacionProductos4() }
+    }
 
     /**
      * Configura el manejo de los márgenes de la pantalla para que se ajuste a la visibilidad de las barras del sistema.
@@ -80,8 +92,11 @@ class pantallaPrincipalActivity : AppCompatActivity() {
     private fun setupPopupMenuOptions(popupView: View, popupWindow: PopupWindow) {
         // Manejo de la opción 1
         popupView.findViewById<View>(R.id.op1).setOnClickListener {
-            Toast.makeText(this, "Opción Inicio seleccionada", Toast.LENGTH_SHORT).show()
-            popupWindow.dismiss() // Cerrar el PopupWindow
+            Toast.makeText(this,"inicio", Toast.LENGTH_SHORT).show()
+            popupWindow.dismiss()
+            val intent = Intent(this, pantallaPrincipalActivity::class.java)
+            startActivity(intent)
+        // Cerrar el PopupWindow
         }
 
         // Manejo de la opción 2
@@ -113,4 +128,25 @@ class pantallaPrincipalActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
+
+    private fun navegacionProductos(){
+        val intent = Intent(this, pantallaProductosActivity::class.java)
+        startActivity(intent)
+    }
+        private fun navegacionProductos2(){
+            val intent = Intent(this, pantallaProductos2Activity::class.java)
+            startActivity(intent)
+        }
+
+    private fun navegacionProductos3(){
+        val intent = Intent(this, pantallaProductos3Activity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navegacionProductos4(){
+        val intent = Intent(this, pantallaProductos4Activity::class.java)
+        startActivity(intent)
+    }
+
+
 }

@@ -173,6 +173,60 @@
 
                 <!-- Card 1 -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/targetasProductos"
+                    android:layout_marginStart="38dp"
+                    android:layout_width="260dp"
+                    android:layout_height="360dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="220dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Menú"
+                            android:src="@drawable/taladro" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="WORKPRO"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="$ 254.915"
+                            android:textColor="#FF0707"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/targetasProductos2"
                     android:layout_marginStart="38dp"
                     android:layout_width="260dp"
                     android:layout_height="360dp"
@@ -223,6 +277,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/targetasProductos3"
                     android:layout_marginStart="38dp"
                     android:layout_width="260dp"
                     android:layout_height="360dp"
@@ -273,56 +328,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_marginStart="38dp"
-                    android:layout_width="260dp"
-                    android:layout_height="360dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="150dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="$ 254.915"
-                            android:textColor="#FF0707"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
+                    android:id="@+id/targetasProductos4"
                     android:layout_marginStart="38dp"
                     android:layout_width="260dp"
                     android:layout_height="360dp"
@@ -400,50 +406,6 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <!-- Card 1 -->
-                <androidx.cardview.widget.CardView
-                    android:layout_marginStart="38dp"
-                    android:layout_width="232dp"
-                    android:layout_height="177dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/taladro"
-                            android:clickable="true"
-                            android:focusable="true"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_marginStart="38dp"
                     android:layout_width="232dp"
