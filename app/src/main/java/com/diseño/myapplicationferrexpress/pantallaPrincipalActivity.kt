@@ -50,6 +50,18 @@ class pantallaPrincipalActivity : AppCompatActivity() {
 
         val botonProductos4 = findViewById<CardView>(R.id.targetasProductos4)
         botonProductos4.setOnClickListener { navegacionProductos4() }
+
+        val botonPromocion1 = findViewById<CardView>(R.id.promocion1)
+        botonPromocion1.setOnClickListener { navegacionPromocion1() }
+
+        val botonPromocion2 = findViewById<CardView>(R.id.promocion2)
+        botonPromocion2.setOnClickListener { navegacionPromocion2() }
+
+        val botonPromocion3 = findViewById<CardView>(R.id.promocion3)
+        botonPromocion3.setOnClickListener { navegacionPromocion3() }
+
+        val botonPromocion4 = findViewById<CardView>(R.id.promocion4)
+        botonPromocion4.setOnClickListener { navegacionPromocion4() }
     }
 
     /**
@@ -144,6 +156,24 @@ class pantallaPrincipalActivity : AppCompatActivity() {
     }
 
     private fun navegacionProductos4(){
+        val intent = Intent(this, pantallaProductos4Activity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navegacionPromocion1(){
+        val intent = Intent(this, pantallaProductosActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navegacionPromocion2(){
+        val intent = Intent(this, pantallaProductos2Activity::class.java)
+        startActivity(intent)
+    }
+    private fun navegacionPromocion3(){
+        val intent = Intent(this, pantallaProductos3Activity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navegacionPromocion4(){
         val intent = Intent(this, pantallaProductos4Activity::class.java)
         startActivity(intent)
     }

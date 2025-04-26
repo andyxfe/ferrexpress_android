@@ -30,9 +30,9 @@
             android:id="@+id/ContenedorHeader"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/bordegeneral"
             android:orientation="horizontal"
-            android:padding="10dp"
-            android:background="@drawable/bordegeneral">
+            android:padding="10dp">
 
             <!-- Logo y texto -->
             <LinearLayout
@@ -93,12 +93,11 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="3dp"
                 android:layout_marginStart="2dp"
-                android:layout_weight="10"
                 android:layout_marginTop="2dp"
-                >
+                android:layout_weight="10"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="3dp">
 
                 <Button
                     android:id="@+id/botonLogin"
@@ -128,8 +127,8 @@
                     android:layout_height="24dp"
                     android:layout_marginStart="3dp"
                     android:clickable="true"
-                    android:focusable="true"
                     android:contentDescription="Carrito"
+                    android:focusable="true"
                     android:src="@drawable/carritocompra" />
 
                 <ImageView
@@ -137,8 +136,8 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="2dp"
-                    android:contentDescription="Menú"
                     android:clickable="true"
+                    android:contentDescription="Menú"
                     android:focusable="true"
                     android:src="@drawable/iconomenu" />
             </LinearLayout>
@@ -246,13 +245,13 @@
                             android:layout_height="150dp"
                             android:layout_gravity="center"
                             android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
+                            android:src="@drawable/maletin" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
+                            android:text="BOSCH"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -261,7 +260,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="$ 254.915"
+                            android:text="$ 71.910"
                             android:textColor="#FF0707"
                             android:textSize="20sp" />
 
@@ -269,7 +268,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
+                            android:text="Maletín 46 piezas para atornillar Bosch"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -297,13 +296,13 @@
                             android:layout_height="150dp"
                             android:layout_gravity="center"
                             android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
+                            android:src="@drawable/pulidora" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
+                            android:text="SKIL"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -312,7 +311,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="$ 254.915"
+                            android:text="$ 292.492"
                             android:textColor="#FF0707"
                             android:textSize="20sp" />
 
@@ -320,7 +319,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
+                            android:text="Mini Pulidora angular 4 1/2 9004 830W + Taladro percutor 6555"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -348,13 +347,13 @@
                             android:layout_height="150dp"
                             android:layout_gravity="center"
                             android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
+                            android:src="@drawable/percutor" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
+                            android:text="TASK"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -363,7 +362,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="$ 254.915"
+                            android:text="$ 1.199.900"
                             android:textColor="#FF0707"
                             android:textSize="20sp" />
 
@@ -371,7 +370,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
+                            android:text="TKit taladro percutor 13 mm GSB 185-Li + llave de impacto GDR 18V-200 Bosch"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -407,6 +406,7 @@
                 android:padding="16dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/promocion1"
                     android:layout_marginStart="38dp"
                     android:layout_width="232dp"
                     android:layout_height="177dp"
@@ -448,6 +448,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/promocion2"
                     android:layout_marginStart="38dp"
                     android:layout_width="232dp"
                     android:layout_height="177dp"
@@ -467,13 +468,13 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
+                            android:src="@drawable/maletin" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
+                            android:text="BOSCH"
                             android:textColor="@color/black"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -482,13 +483,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
+                            android:text="Maletín 46 piezas para atornillar Bosch"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/promocion3"
                     android:layout_marginStart="38dp"
                     android:layout_width="232dp"
                     android:layout_height="177dp"
@@ -508,13 +510,13 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
+                            android:src="@drawable/pulidora" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
+                            android:text="SKIL"
                             android:textColor="@color/black"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -523,13 +525,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
+                            android:text="Mini Pulidora angular 4 1/2 9004 830W + Taladro percutor 6555 "
                             android:textColor="@color/black"
                             android:textSize="13sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/promocion4"
                     android:layout_marginStart="38dp"
                     android:layout_width="232dp"
                     android:layout_height="177dp"
@@ -549,13 +552,13 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
+                            android:src="@drawable/percutor" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
+                            android:text="TASK"
                             android:textColor="@color/black"
                             android:textSize="15sp"
                             android:textStyle="bold" />
@@ -564,9 +567,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
+                            android:text="Kit taladro percutor 13 mm GSB 185-Li + llave de impacto GDR 18V-200 Bosch"
                             android:textColor="@color/black"
-                            android:textSize="13sp" />
+                            android:textSize="12sp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

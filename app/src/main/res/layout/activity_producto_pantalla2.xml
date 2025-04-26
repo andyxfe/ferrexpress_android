@@ -139,4 +139,277 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="@id/heder"
+        app:layout_constraintStart_toStartOf="@id/heder"
+        app:layout_constraintTop_toBottomOf="@id/heder">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedorcompras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#DC362E"
+            android:padding="16dp">
+
+            <!-- Miniaturas -->
+            <LinearLayout
+                android:id="@+id/miniaturasContenedor"
+                android:layout_width="wrap_content"
+                android:layout_height="386dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Miniatura 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="91dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="27dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="8dp">
+
+                    <ImageView
+                        android:id="@+id/imagen1"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:scaleX="-1"
+                        android:src="@drawable/maletin" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Miniatura 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="91dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="27dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="8dp">
+
+                    <ImageView
+                        android:id="@+id/imagen2"
+                        android:layout_width="91dp"
+                        android:layout_height="75dp"
+                        android:layout_marginBottom="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/maletin1" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Miniatura 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="91dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="27dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="8dp">
+
+                    <ImageView
+                        android:id="@+id/imagen3"
+                        android:layout_width="91dp"
+                        android:layout_height="75dp"
+                        android:layout_marginBottom="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/maletin2" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Miniatura 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="91dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="8dp">
+
+                    <ImageView
+                        android:id="@+id/imagen4"
+                        android:layout_width="91dp"
+                        android:layout_height="75dp"
+                        android:layout_marginBottom="8dp"
+                        android:padding="4dp"
+                        android:src="@drawable/maletin3" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Imagen principal -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="256dp"
+                android:layout_height="386dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp"
+                app:layout_constraintStart_toEndOf="@id/miniaturasContenedor"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imagenPrincipal"
+                    android:layout_width="256dp"
+                    android:layout_height="386dp"
+                    android:layout_marginStart="1dp"
+                    android:scaleType="fitCenter"
+                    android:scaleX="-1"
+                    android:src="@drawable/maletin" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/descripcion"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="12dp"
+        android:background="#DC362E"
+        android:padding="16dp"
+        app:cardBackgroundColor="#DC362E"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+
+        <!-- Miniaturas -->
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:background="@null"
+            android:orientation="horizontal"
+            android:padding="30dp"
+            android:text=" Maletín 46 piezas para atornillar Bosch"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:background="@null"
+            android:orientation="horizontal"
+            android:text="$71.910"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="164dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#ffffff"
+            app:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="15dp">
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="#ffffff"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:text=" añadir al carrito "
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="@id/descripcion"
+        app:layout_constraintTop_toBottomOf="@id/descripcion"
+        app:layout_constraintStart_toStartOf="@id/descripcion">
+
+        <!-- Scroll horizontal -->
+        <ScrollView
+            android:layout_width="379dp"
+            android:layout_height="160dp"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <!-- contenedor principal horizontal -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:layout_height="180dp"
+                android:background="#E1D7D7"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Preguntas frecuentes Cambios y devoluciones Términos y condiciones Protección de datos Política de cookies Superintendencia de industria y comercio SIC PQR Política de tratamiento de datos"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Términos y condiciones Servicio al cliente Misión Visión ¿Cómo comprar Catálogo"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Servicio al cliente Homecenter Empresas Medios de pago Cambios y devoluciones Política de protección de datos personales Términos y condiciones Estatuto del consumidor Mapa del sitio Superintendencia Industria y Comercio SIC"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="end"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:text="Términos y condiciones Servicio al cliente Misión Visión ¿Cómo comprar Catálogo"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mi cuenta Regístrate Cambia tu clave Olvidé mi clave"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
