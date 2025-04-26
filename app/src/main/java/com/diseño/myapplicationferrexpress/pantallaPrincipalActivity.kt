@@ -16,6 +16,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.diseño.myapplicationferrexpress.adapter.ProductoAdapter
+import com.diseño.myapplicationferrexpress.adapter.ProductoAdapter.ViewHolder
 import com.example.myapplicationferrexpress.R
 
 class pantallaPrincipalActivity : AppCompatActivity() {
@@ -62,6 +66,17 @@ class pantallaPrincipalActivity : AppCompatActivity() {
 
         val botonPromocion4 = findViewById<CardView>(R.id.promocion4)
         botonPromocion4.setOnClickListener { navegacionPromocion4() }
+
+        // Instancia de la base de datos
+        val dbHelper = DatabaseHelper(this)
+
+        // Obtener lista de productos
+        val productos = dbHelper.obtenerListaProductos()
+
+        // Configurar RecyclerView
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewProductos)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = ProductoAdapter(productos)
     }
 
     /**
@@ -177,6 +192,5 @@ class pantallaPrincipalActivity : AppCompatActivity() {
         val intent = Intent(this, pantallaProductos4Activity::class.java)
         startActivity(intent)
     }
-
 
 }

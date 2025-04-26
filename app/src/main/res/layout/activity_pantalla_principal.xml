@@ -10,6 +10,12 @@
     android:layout_marginHorizontal="16dp"
     tools:context=".pantallaPrincipalactivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProductos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"/>
+
 
 
     <!-- Card con sombra y esquinas redondeadas -->
@@ -197,29 +203,36 @@
                             android:src="@drawable/taladro" />
 
                         <TextView
+                            android:id="@+id/textNombre"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:text="Nombre del Producto"
+                            android:textSize="18sp" />
 
                         <TextView
+                            android:id="@+id/textPrecio"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="$ 254.915"
-                            android:textColor="#FF0707"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
-                            android:textColor="@color/black"
+                            android:text="Precio: $0.00"
                             android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textDescripcion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Descripción del Producto"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:tag="botonagregarcarrito"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="10dp"
+                            android:text="agregar al carrito"
+                            android:background="@drawable/bordeboton"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -272,6 +285,17 @@
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
+                        <Button
+                            android:tag="botonagregarcarrito"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="10dp"
+                            android:text="agregar al carrito"
+                            android:background="@drawable/bordeboton"/>
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -323,6 +347,18 @@
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
+                        <Button
+                            android:tag="botonagregarcarrito"
+                            android:id="@+id/botonagregarcarrito2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="10dp"
+                            android:text="agregar al carrito"
+                            android:background="@drawable/bordeboton"/>
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -373,6 +409,17 @@
                             android:text="TKit taladro percutor 13 mm GSB 185-Li + llave de impacto GDR 18V-200 Bosch"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
+
+                        <Button
+                            android:tag="botonagregarcarrito"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="10dp"
+                            android:text="agregar al carrito"
+                            android:background="@drawable/bordeboton"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -660,5 +707,7 @@
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
