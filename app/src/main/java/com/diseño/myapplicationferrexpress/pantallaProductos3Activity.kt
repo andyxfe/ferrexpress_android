@@ -34,8 +34,20 @@ class pantallaProductos3Activity : AppCompatActivity() {
         val botonLogin = findViewById<Button>(R.id.botonLogin)
         botonLogin.setOnClickListener { navegacionLogin() }
 
-        val botonCarrito = findViewById<ImageView>(R.id.botonCarrito)
-        botonCarrito.setOnClickListener { navegacionCarrito() }
+        val botonAgregar = findViewById<Button>(R.id.botonañadircarrtio)
+        botonAgregar.setOnClickListener {
+            // Crear un Intent para enviar los datos del producto al carrito
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("productoId", 2) // ID del producto
+                putExtra("productoNombre", "Pulidora angular 4 1/2 pulgadas")
+                putExtra("productoPrecio",  292.492)
+                putExtra("productoDescripcion","Pulidora angular 4 1/2 pulgadas")
+                putExtra("productoImagenResId", R.drawable.pulidora)
+                putExtra("productoCantidad", 1)
+            }
+            startActivity(intent) // Navegar de regreso al MainActivity o al lugar donde se maneje el carrito
+        }
+
 
         val imagenPrincipal =findViewById<ImageView>(R.id.imagenPrincipal)
         val miniatura1 =findViewById<ImageView>(R.id.imagen1)
@@ -47,6 +59,7 @@ class pantallaProductos3Activity : AppCompatActivity() {
         asignarCambioImagen(miniatura2,imagenPrincipal,R.drawable.pulidora1)
         asignarCambioImagen(miniatura3,imagenPrincipal,R.drawable.pulidora2)
         asignarCambioImagen(miniatura4,imagenPrincipal,R.drawable.pulidora3)
+
     }
     private fun setupWindowInsets() {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -91,6 +104,8 @@ class pantallaProductos3Activity : AppCompatActivity() {
         popupView.findViewById<View>(R.id.op2).setOnClickListener {
             Toast.makeText(this, "Opción Promociones seleccionada", Toast.LENGTH_SHORT).show()
             popupWindow.dismiss()
+            val intent = Intent(this, pantallaPrincipalActivity::class.java)
+            startActivity(intent)
         }
 
         popupView.findViewById<View>(R.id.op3).setOnClickListener {
@@ -103,13 +118,8 @@ class pantallaProductos3Activity : AppCompatActivity() {
             popupWindow.dismiss()
         }
     }
-
     private fun navegacionLogin(){
         val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-    }
-    private fun navegacionCarrito(){
-        val intent = Intent(this, CarritoDeComprasActivity::class.java)
         startActivity(intent)
     }
 }

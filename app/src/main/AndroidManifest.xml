@@ -13,6 +13,19 @@
         android:theme="@style/Theme.MyApplicationferrexpress"
         tools:targetApi="31">
         <activity
+            android:name="com.diseño.myapplicationferrexpress.productosAgregados"
+            android:exported="false" />
+        <activity
+            android:name="com.diseño.myapplicationferrexpress.MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="com.diseño.myapplicationferrexpress.promocionesPantalla"
+            android:exported="false" />
+        <activity
+            android:name=".productosActivity"
+            android:exported="false" />
+        <activity
             android:name="com.diseño.myapplicationferrexpress.registroActivity"
             android:exported="false" />
         <activity
@@ -32,7 +45,7 @@
             android:exported="false" />
         <activity
             android:name="com.diseño.myapplicationferrexpress.CarritoDeComprasActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.diseño.myapplicationferrexpress.pantallaPrincipalActivity"
             android:exported="true"

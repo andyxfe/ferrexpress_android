@@ -1,78 +1,90 @@
 package com.diseño.myapplicationferrexpress
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.R
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import android.widget.ImageView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.diseño.myapplicationferrexpress.adapter.ProductoAdapter
-import com.diseño.myapplicationferrexpress.ui.theme.MyApplicationferrexpressTheme
+import com.example.myapplicationferrexpress.R
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            MyApplicationferrexpressTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+        setContentView(R.layout.activity_pantalla_principal)
 
-        // Instancia de la base de datos
+        // Inicialización de la base de datos
         val dbHelper = DatabaseHelper(this)
 
-        // Insertar un producto
-        dbHelper.insertarProducto(
-            "WORKPRO",
-            254.915,
-            "Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
-        )
+        // Obtén los datos de productos y promociones
+        val productos = dbHelper.obtenerListaProductos()
+        val promociones = productos.filter { it.esPromocion } // Filtrar las promociones
 
-        // Obtener los productos de la base de datos como una lista
-        val productos: List<Producto> = dbHelper.obtenerListaProductos()
+        // Configuración del RecyclerView para productos
+        val recyclerViewProductos = findViewById<RecyclerView>(R.id.recyclerViewProductos)
+        recyclerViewProductos.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewProductos.adapter = ProductoAdapter(productos, R.layout.activity_productos) { producto ->
+            // Agregar el producto al carrito
+            Carrito.agregarProducto(producto)
+            Toast.makeText(this, "${producto.nombre} agregado al carrito", Toast.LENGTH_SHORT).show()
 
-        // Configurar el RecyclerView
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewProductos)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = ProductoAdapter(productos)
-
-        // Imprimir los productos en Logcat
-        productos.forEach { producto ->
-            Log.d(
-                "DB",
-                "ID: ${producto.id}, Nombre: ${producto.nombre}, Precio: ${producto.precio}, Descripción: ${producto.descripcion}"
-            )
+            // Abrir directamente la pantalla del carrito para mostrar el producto agregado
+            val intent = Intent(this, CarritoDeComprasActivity::class.java)
+            startActivity(intent)
         }
+
+        // Configuración del RecyclerView para promociones
+        val recyclerViewPromociones = findViewById<RecyclerView>(R.id.recyclerViewPromociones)
+        recyclerViewPromociones.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewPromociones.adapter = ProductoAdapter(promociones, R.layout.item_promocion) { promocion ->
+            // Agregar la promoción al carrito
+            Carrito.agregarProducto(promocion)
+            Toast.makeText(this, "${promocion.nombre} agregado al carrito", Toast.LENGTH_SHORT).show()
+
+            // Abrir directamente la pantalla del carrito para mostrar el producto agregado
+            val intent = Intent(this, CarritoDeComprasActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Configuración del ícono de carrito para navegar a la pantalla del carrito
+        val botonCarrito = findViewById<ImageView>(R.id.botonCarrito)
+        botonCarrito.setOnClickListener {
+            startActivity(Intent(this, CarritoDeComprasActivity::class.java))
+        }
+
+        // Manejo de datos enviados desde otra pantalla
+        recibirProductoDesdeOtraPantalla()
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    private fun recibirProductoDesdeOtraPantalla() {
+        val extras = intent.extras
+        if (extras != null) {
+            // Extraer los datos enviados por el Intent
+            val productoId = extras.getInt("productoId")
+            val productoNombre = extras.getString("productoNombre") ?: ""
+            val productoPrecio = extras.getDouble("productoPrecio")
+            val productoDescripcion = extras.getString("productoDescripcion") ?: ""
+            val productoImagenResId = extras.getInt("productoImagenResId")
+            val productoCantidad = extras.getInt("productoCantidad", 1)
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyApplicationferrexpressTheme {
-        Greeting("Android")
+            // Crear el objeto Producto y agregarlo al carrito
+            val producto = Producto(
+                id = productoId,
+                nombre = productoNombre,
+                precio = productoPrecio,
+                descripcion = productoDescripcion,
+                imagenResId = productoImagenResId,
+                esPromocion = false, // Cambia según tu lógica
+                cantidad = productoCantidad
+            )
+            Carrito.agregarProducto(producto)
+
+            // Abrir directamente la pantalla del carrito
+            val intent = Intent(this, CarritoDeComprasActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -10,13 +10,6 @@
     android:layout_marginHorizontal="16dp"
     tools:context=".pantallaPrincipalactivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewProductos"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"/>
-
-
 
     <!-- Card con sombra y esquinas redondeadas -->
     <androidx.cardview.widget.CardView
@@ -150,478 +143,52 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/targetas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="6dp"
-        app:layout_constraintEnd_toEndOf="@id/heder"
-        app:layout_constraintTop_toBottomOf="@id/heder"
-        app:layout_constraintStart_toStartOf="@id/heder">
+
 
         <!-- Scroll horizontal -->
-        <HorizontalScrollView
-            android:layout_width="379dp"
-            android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:scrollbars="none">
 
-            <!-- contenedor principal horizontal -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#DC362E"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <!-- Card 1 -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/targetasProductos"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="260dp"
-                    android:layout_height="360dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="150dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
-
-                        <TextView
-                            android:id="@+id/textNombre"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nombre del Producto"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            android:id="@+id/textPrecio"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Precio: $0.00"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/textDescripcion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Descripción del Producto"
-                            android:textSize="14sp" />
-
-                        <Button
-                            android:tag="botonagregarcarrito"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
-                            android:layout_marginStart="35dp"
-                            android:layout_marginTop="10dp"
-                            android:text="agregar al carrito"
-                            android:background="@drawable/bordeboton"/>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/targetasProductos2"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="260dp"
-                    android:layout_height="360dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="150dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/maletin" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="BOSCH"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="$ 71.910"
-                            android:textColor="#FF0707"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Maletín 46 piezas para atornillar Bosch"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
-
-                        <Button
-                            android:tag="botonagregarcarrito"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
-                            android:layout_marginStart="35dp"
-                            android:layout_marginTop="10dp"
-                            android:text="agregar al carrito"
-                            android:background="@drawable/bordeboton"/>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/targetasProductos3"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="260dp"
-                    android:layout_height="360dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="150dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/pulidora" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="SKIL"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="$ 292.492"
-                            android:textColor="#FF0707"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Mini Pulidora angular 4 1/2 9004 830W + Taladro percutor 6555"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
-
-                        <Button
-                            android:tag="botonagregarcarrito"
-                            android:id="@+id/botonagregarcarrito2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
-                            android:layout_marginStart="35dp"
-                            android:layout_marginTop="10dp"
-                            android:text="agregar al carrito"
-                            android:background="@drawable/bordeboton"/>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/targetasProductos4"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="260dp"
-                    android:layout_height="360dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="150dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/percutor" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="TASK"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="$ 1.199.900"
-                            android:textColor="#FF0707"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="TKit taladro percutor 13 mm GSB 185-Li + llave de impacto GDR 18V-200 Bosch"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
-
-                        <Button
-                            android:tag="botonagregarcarrito"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
-                            android:layout_marginStart="35dp"
-                            android:layout_marginTop="10dp"
-                            android:text="agregar al carrito"
-                            android:background="@drawable/bordeboton"/>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:id="@+id/promociones"
-        android:layout_width="wrap_content"
+        android:id="@+id/contenedorproductos"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="6dp"
-        app:layout_constraintEnd_toEndOf="@id/targetas"
-        app:layout_constraintTop_toBottomOf="@id/targetas"
-        app:layout_constraintStart_toStartOf="@id/targetas">
+        app:cardBackgroundColor="#DC362E"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heder">
 
-        <!-- Scroll horizontal -->
-        <HorizontalScrollView
-            android:layout_width="379dp"
+    <!-- RecyclerView contenido dentro del contenedor -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProductos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="10dp" /> <!-- Ajusta el padding para que no desborde -->
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Contenedorpromociones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="#DC362E"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contenedorproductos">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPromociones"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:scrollbars="none">
+            android:layout_marginTop="16dp"
+            android:overScrollMode="never" />
 
-            <!-- contenedor principal horizontal -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#DC362E"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/promocion1"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="232dp"
-                    android:layout_height="177dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/taladro" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="WORKPRO"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Taladro Inalámbrico De Rotación 1/2 2P/G + 69 Accesorios"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/promocion2"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="232dp"
-                    android:layout_height="177dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/maletin" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="BOSCH"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Maletín 46 piezas para atornillar Bosch"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/promocion3"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="232dp"
-                    android:layout_height="177dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/pulidora" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="SKIL"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Mini Pulidora angular 4 1/2 9004 830W + Taladro percutor 6555 "
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/promocion4"
-                    android:layout_marginStart="38dp"
-                    android:layout_width="232dp"
-                    android:layout_height="177dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="220dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:contentDescription="Menú"
-                            android:src="@drawable/percutor" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="TASK"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Kit taladro percutor 13 mm GSB 185-Li + llave de impacto GDR 18V-200 Bosch"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-        </HorizontalScrollView>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -629,9 +196,9 @@
         android:layout_marginTop="16dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="6dp"
-        app:layout_constraintEnd_toEndOf="@id/promociones"
-        app:layout_constraintTop_toBottomOf="@id/promociones"
-        app:layout_constraintStart_toStartOf="@id/promociones">
+        app:layout_constraintEnd_toEndOf="@id/Contenedorpromociones"
+        app:layout_constraintTop_toBottomOf="@id/Contenedorpromociones"
+        app:layout_constraintStart_toStartOf="@id/Contenedorpromociones">
 
         <!-- Scroll horizontal -->
         <ScrollView

@@ -34,8 +34,20 @@ class pantallaProductos2Activity : AppCompatActivity() {
         val botonLogin = findViewById<Button>(R.id.botonLogin)
         botonLogin.setOnClickListener { navegacionLogin() }
 
-        val botonCarrito = findViewById<ImageView>(R.id.botonCarrito)
-        botonCarrito.setOnClickListener { navegacionCarrito() }
+        val botonAgregar = findViewById<Button>(R.id.botonañadircarrtio)
+        botonAgregar.setOnClickListener {
+            // Crear un Intent para enviar los datos del producto al carrito
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("productoId", 3) // ID del producto
+                putExtra("productoNombre", "Maletín de Herramientas")
+                putExtra("productoPrecio", 119.555)
+                putExtra("productoDescripcion","Kit de herramientas 46 piezas")
+                putExtra("productoImagenResId", R.drawable.maletin)
+                putExtra("productoCantidad", 1)
+            }
+            startActivity(intent) // Navegar de regreso al MainActivity o al lugar donde se maneje el carrito
+        }
+
 
         val imagenPrincipal =findViewById<ImageView>(R.id.imagenPrincipal)
         val miniatura1 =findViewById<ImageView>(R.id.imagen1)
@@ -92,6 +104,8 @@ class pantallaProductos2Activity : AppCompatActivity() {
         popupView.findViewById<View>(R.id.op2).setOnClickListener {
             Toast.makeText(this, "Opción Promociones seleccionada", Toast.LENGTH_SHORT).show()
             popupWindow.dismiss()
+            val intent = Intent(this, pantallaPrincipalActivity::class.java)
+            startActivity(intent)
         }
 
         popupView.findViewById<View>(R.id.op3).setOnClickListener {
@@ -104,14 +118,11 @@ class pantallaProductos2Activity : AppCompatActivity() {
             popupWindow.dismiss()
         }
     }
-
     private fun navegacionLogin(){
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
-    private fun navegacionCarrito(){
-        val intent = Intent(this, CarritoDeComprasActivity::class.java)
-        startActivity(intent)
-    }
+
 
 }
+

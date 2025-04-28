@@ -298,7 +298,7 @@
             android:layout_marginTop="40dp"
             android:background="@null"
             android:orientation="horizontal"
-            android:text="$71.910"
+            android:text="$ 119.555"
             android:textColor="@color/black"
             android:textSize="30sp" />
 
@@ -313,6 +313,7 @@
             app:cardCornerRadius="15dp">
 
             <Button
+                android:id="@+id/botonañadircarrtio"
                 android:layout_width="165dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="20dp"

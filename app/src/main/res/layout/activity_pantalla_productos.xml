@@ -321,6 +321,7 @@
             app:cardCornerRadius="15dp">
 
             <Button
+                android:id="@+id/botonañadircarrtio"
                 android:layout_width="165dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="20dp"

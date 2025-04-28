@@ -34,8 +34,21 @@ class pantallaProductosActivity : AppCompatActivity() {
         val botonLogin = findViewById<Button>(R.id.botonLogin)
         botonLogin.setOnClickListener { navegacionLogin() }
 
-        val botonCarrito = findViewById<ImageView>(R.id.botonCarrito)
-        botonCarrito.setOnClickListener { navegacionCarrito() }
+        val botonAgregar = findViewById<Button>(R.id.botonañadircarrtio)
+        botonAgregar.setOnClickListener {
+            // Crear un Intent para enviar los datos del producto al carrito
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("productoId", 1) // ID del producto
+                putExtra("productoNombre", "Taladro Inalámbrico")
+                putExtra("productoPrecio", 254.492)
+                putExtra("productoDescripcion", "Taladro Bosch profesional")
+                putExtra("productoImagenResId", R.drawable.taladro)
+                putExtra("productoCantidad", 1)
+            }
+            startActivity(intent) // Navegar de regreso al MainActivity o al lugar donde se maneje el carrito
+            Toast.makeText(this, "Producto agregado al carrito", Toast.LENGTH_SHORT).show()
+        }
+
 
         val imagenPrincipal =findViewById<ImageView>(R.id.imagenPrincipal)
         val miniatura1 =findViewById<ImageView>(R.id.imagen1)
@@ -110,9 +123,6 @@ class pantallaProductosActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
-    private fun navegacionCarrito(){
-        val intent = Intent(this, CarritoDeComprasActivity::class.java)
-        startActivity(intent)
-    }
+
 
 }

@@ -31,12 +31,23 @@ class pantallaProductos4Activity : AppCompatActivity() {
         botonMenu.setOnClickListener {
             showPopupMenu(botonMenu)
         }
-
         val botonLogin = findViewById<Button>(R.id.botonLogin)
         botonLogin.setOnClickListener { navegacionLogin() }
 
-        val botonCarrito = findViewById<ImageView>(R.id.botonCarrito)
-        botonCarrito.setOnClickListener { navegacionCarrito() }
+        val botonAgregar = findViewById<Button>(R.id.botonañadircarrtio)
+        botonAgregar.setOnClickListener {
+            // Crear un Intent para enviar los datos del producto al carrito
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("productoId", 4) // ID del producto
+                putExtra("productoNombre", "Kit Atornillador")
+                putExtra("productoPrecio",  1199900.0)
+                putExtra("productoDescripcion","Atornillador eléctrico con accesorios")
+                putExtra("productoImagenResId", R.drawable.percutor)
+                putExtra("productoCantidad", 1)
+            }
+            startActivity(intent) // Navegar de regreso al MainActivity o al lugar donde se maneje el carrito
+        }
+
 
         val imagenPrincipal =findViewById<ImageView>(R.id.imagenPrincipal)
         val miniatura1 =findViewById<ImageView>(R.id.imagen1)
@@ -48,6 +59,7 @@ class pantallaProductos4Activity : AppCompatActivity() {
         asignarCambioImagen(miniatura2,imagenPrincipal,R.drawable.percutor1)
         asignarCambioImagen(miniatura3,imagenPrincipal,R.drawable.percutor2)
         asignarCambioImagen(miniatura4,imagenPrincipal,R.drawable.percutor3)
+
     }
     private fun setupWindowInsets() {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -61,6 +73,7 @@ class pantallaProductos4Activity : AppCompatActivity() {
             imagenPrincipal.setImageResource(imagenResId)
         }
     }
+
     private fun showPopupMenu(botonMenu: ImageView) {
         val layoutInflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val popupView = layoutInflater.inflate(R.layout.popup_menu_layout, null)
@@ -91,6 +104,8 @@ class pantallaProductos4Activity : AppCompatActivity() {
         popupView.findViewById<View>(R.id.op2).setOnClickListener {
             Toast.makeText(this, "Opción Promociones seleccionada", Toast.LENGTH_SHORT).show()
             popupWindow.dismiss()
+            val intent = Intent(this, pantallaPrincipalActivity::class.java)
+            startActivity(intent)
         }
 
         popupView.findViewById<View>(R.id.op3).setOnClickListener {
@@ -103,13 +118,8 @@ class pantallaProductos4Activity : AppCompatActivity() {
             popupWindow.dismiss()
         }
     }
-
     private fun navegacionLogin(){
         val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-    }
-    private fun navegacionCarrito(){
-        val intent = Intent(this, CarritoDeComprasActivity::class.java)
         startActivity(intent)
     }
 }
